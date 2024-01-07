@@ -1,0 +1,25 @@
+﻿@inject NavigationManager NavManager
+@using Bislerium.Data
+
+<MudDialog>
+    <DialogContent>
+        Are you sure you want to log out?
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Primary" OnClick="logout">Log out</MudButton>
+    </DialogActions>
+</MudDialog>
+
+
+@code {
+    [CascadingParameter] MudDialogInstance MudDialog { get; set; }
+
+    void Submit() => MudDialog.Close(DialogResult.Ok(true));
+    void Cancel() => MudDialog.Cancel();
+
+    public void logout()
+    {
+        NavManager.NavigateTo("/login");
+    }
+}

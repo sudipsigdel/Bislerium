@@ -1,0 +1,59 @@
+﻿@page "/login"
+@layout LoginLayout
+@inject UserServices UserSerices
+@inject NavigationManager NavManager
+
+@using System.Diagnostics;
+@using Bislerium.Data
+
+<div style="margin: 10% auto auto 30%">
+    <MudLayout>
+    <MudItem xs="12" sm="7">
+        <MudCard>
+            <h2 style="margin: 10px auto auto 30%">Enter your password!</h2>
+            <MudCardContent>
+                <MudTextField Label="Password" Class="mt-3"
+                @bind-Value="_password" InputType="InputType.Password" />
+
+                    @if (!string.IsNullOrEmpty(_errorMessage))
+                    {
+                        <MudAlert Severity="Severity.Error">@_errorMessage</MudAlert>
+                    }
+            </MudCardContent>
+
+            <MudCardActions>
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" OnClick="OnLogin">Login</MudButton>
+            </MudCardActions>
+        </MudCard>
+    </MudItem>
+</MudLayout>
+</div>
+
+@code {
+    string _password;
+    string _errorMessage;
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+
+
+    private void OnLogin()
+    {
+        try
+        {
+            if (String.IsNullOrEmpty(_password))
+            {
+                _errorMessage = "Password cannot be empty";
+                return;
+            }
+            _globalState.CurrentUser = UserSerices.loginCheck(_password);
+            NavManager.NavigateTo("/home");
+
+
+        }
+        catch (Exception e)
+        {
+            _errorMessage = e.Message;
+        }
+    }
+
+}

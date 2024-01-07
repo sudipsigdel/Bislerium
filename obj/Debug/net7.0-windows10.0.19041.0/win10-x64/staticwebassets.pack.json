@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Acer\\OneDrive\\Desktop\\Bislerium\\obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Bislerium.styles.css",
+      "PackagePath": "staticwebassets\\Bislerium.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\OneDrive\\Desktop\\Bislerium\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Acer\\OneDrive\\Desktop\\Bislerium\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.Bislerium.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.build.Bislerium.props",
+      "PackagePath": "build\\Bislerium.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildMultiTargeting.Bislerium.props",
+      "PackagePath": "buildMultiTargeting\\Bislerium.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildTransitive.Bislerium.props",
+      "PackagePath": "buildTransitive\\Bislerium.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

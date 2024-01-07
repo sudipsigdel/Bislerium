@@ -1,0 +1,16 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <CascadingValue Value="_globalState">
+        @Body
+    </CascadingValue>
+</MudLayout>
+
+@code{
+    private GlobalState _globalState = new();
+
+}
