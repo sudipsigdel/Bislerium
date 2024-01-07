@@ -2,12 +2,20 @@
 @inject NavigationManager NavManager
 @using Bislerium.Data
 
-@code{
+@if (_globalState.CurrentUser != null)
+{
+    <h3> User is @_globalState.CurrentUser.Role</h3>
+}
+
+@code {
     [CascadingParameter]
     private GlobalState _globalState { get; set; }
     protected override void OnInitialized()
     {
-        NavManager.NavigateTo("/login");
+        if (_globalState.CurrentUser == null)
+        {
+            NavManager.NavigateTo("/login");
+        }
 
         base.OnInitialized();
     }

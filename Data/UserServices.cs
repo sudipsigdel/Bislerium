@@ -9,7 +9,7 @@ namespace Bislerium.Data
     public class UserServices
     {
 
-        private List<User> _seedUsersList = new()
+        private List<User> _UsersList = new()
         {
             new User()
             {
@@ -26,7 +26,7 @@ namespace Bislerium.Data
 
         public User loginCheck(String Password)
         {
-            User user = _seedUsersList.FirstOrDefault(_user => _user.Password == Password);
+            User user = _UsersList.FirstOrDefault(_user => _user.Password == Password);
             if (user == null)
             {
                 throw new Exception("Invalid Password");

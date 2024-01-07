@@ -19,6 +19,8 @@ namespace Bislerium
             builder.Services.AddMauiBlazorWebView();
             builder.Services.AddMudServices();
             builder.Services.AddSingleton<UserServices>();
+            //builder.Services.AddSingleton<CoffeeServices>();
+
 
 #if DEBUG
             builder.Services.AddBlazorWebViewDeveloperTools();
