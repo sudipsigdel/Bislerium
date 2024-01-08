@@ -8,29 +8,29 @@
 
 <div style="margin: 10% auto auto 30%">
     <MudLayout>
-    <MudItem xs="12" sm="7">
+        <MudItem xs="12" sm="7">
 
-        <MudCard>
-            <h2 style="margin: 10px auto auto 30%">Enter your password!</h2>
+            <MudCard>
+                <h2 style="margin: 10px auto auto 30%">Enter your password!</h2>
 
-            <MudCardContent>
-                    <MudAlert Severity="Severity.Info">Password for Admin: admin</MudAlert>
-                    <MudAlert Severity="Severity.Info">Password for Staff: staff</MudAlert>
-                <MudTextField Label="Password" Class="mt-3"
-                @bind-Value="_password" InputType="InputType.Password" />
+                <MudCardContent>
+                        <MudAlert Severity="Severity.Info">Password for Admin: admin</MudAlert>
+                        <MudAlert Severity="Severity.Info">Password for Staff: staff</MudAlert>
+                    <MudTextField Label="Password" Class="mt-3"
+                    @bind-Value="_password" InputType="InputType.Password" />
 
-                    @if (!string.IsNullOrEmpty(_errorMessage))
-                    {
-                        <MudAlert Severity="Severity.Error">@_errorMessage</MudAlert>
-                    }
-            </MudCardContent>
+                        @if (!string.IsNullOrEmpty(_errorMessage))
+                        {
+                            <MudAlert Severity="Severity.Error">@_errorMessage</MudAlert>
+                        }
+                </MudCardContent>
 
-            <MudCardActions>
-                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" OnClick="OnLogin">Login</MudButton>
-            </MudCardActions>
-        </MudCard>
-    </MudItem>
-</MudLayout>
+                <MudCardActions>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" OnClick="OnLogin">Login</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudLayout>
 </div>
 
 @code {

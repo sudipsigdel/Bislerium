@@ -24,7 +24,7 @@ namespace Bislerium.Data
             }
         };
 
-        public User loginCheck(String Password)
+        public User loginCheck(string Password)
         {
             User user = _UsersList.FirstOrDefault(_user => _user.Password == Password);
             if (user == null)

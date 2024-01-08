@@ -955,9 +955,6 @@
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Shared\MainLayout.razor.css">
       <PackagePath>Shared\MainLayout.razor.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Shared\MyNavMenu.razor.css">
-      <PackagePath>Shared\MyNavMenu.razor.css</PackagePath>
-    </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
     <ResolvedSDKReference Include="C:\Users\Acer\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.2.msix">

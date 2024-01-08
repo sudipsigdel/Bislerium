@@ -1,38 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Bislerium.Data
+﻿namespace Bislerium.Data
 {
     internal class AppUtils
     {
-
-        public static string GetDesktopDirectoryPath()
+        public static string GetAppDirectoryPath()
         {
-            return Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            return Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+                "Cafe Data"
+            );
         }
 
+        public static string GetCoffeeFilePath()
+        {
+            return Path.Combine(GetAppDirectoryPath(), "coffee.json");
+        }
+        public static string GetAddinsFilePath()
+        {
+            return Path.Combine(GetAppDirectoryPath(), "addins.json");
+        }
+        
+         public static string GetCustomerCoffeePath()
+       {
+           return Path.Combine(GetAppDirectoryPath(), "customer.json");
+       }
 
-        public static string GetCofeeListFilePath()
-        {
-            return Path.Combine(GetDesktopDirectoryPath(), "coffeeList.json");
-        }
-
-        public static string GetCustomerCoffeePath()
-        {
-            return Path.Combine(GetDesktopDirectoryPath(), "customer.json");
-        }
-        //getting the JSON Path for Adins
-        public static string GetAddInItemListPath()
-        {
-            return Path.Combine(GetDesktopDirectoryPath(), "Addins.json");
-        }
-        public static string GetOrderListPath()
-        {
-            return Path.Combine(GetDesktopDirectoryPath(), "orders.json");
-        }
+       public static string GetOrderListPath()
+       {
+           return Path.Combine(GetAppDirectoryPath(), "orders.json");
+       }
 
     }
 }

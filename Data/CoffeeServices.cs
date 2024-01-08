@@ -1,30 +1,27 @@
 ﻿using System.Text.Json;
-using Bislerium.Data;
 
-namespace Bislerium.Service
+namespace Bislerium.Data
 {
     public class CoffeeServices
     {
-        // Creating a list of Coffee objects with prices in Nepalese Rupees (NPR)
         private readonly List<Coffee> _coffeeList = new()
         {
-            new() { CoffeeType = "Cappuccino", Price = 150.0 },
-            new() { CoffeeType = "Latte", Price = 170.0 },
-            new() { CoffeeType = "Espresso", Price = 120.0 },
-            new() { CoffeeType = "Americano", Price = 140.0 },
-            new() { CoffeeType = "Mocha", Price = 180.0 },
-            new() { CoffeeType = "Macchiato", Price = 160.0 },
-            new() { CoffeeType = "Flat White", Price = 160.0 },
-            new() { CoffeeType = "Affogato", Price = 200.0 },
-            new() { CoffeeType = "Irish Coffee", Price = 190.0 },
-            new() { CoffeeType = "Turkish Coffee", Price = 130.0 },
-            new() { CoffeeType = "Ristretto", Price = 110.0 }
+            new() { CoffeeType = "Espresso", Price = 200},
+            new() { CoffeeType = "Americano", Price = 185},
+            new() { CoffeeType = "Latte", Price = 210},
+            new() { CoffeeType = "Cappuccino", Price = 250},
+            new() { CoffeeType = "Mocha", Price = 230},
+            new() { CoffeeType = "Cold Brew", Price = 205},
+            new() { CoffeeType = "Iced Coffee", Price = 245},
+            new() { CoffeeType = "Café au Lait", Price = 360},
+            new() { CoffeeType = "Café Cubano", Price = 275 },
+            new() { CoffeeType = "Vienna Coffee", Price = 270 }
         };
 
-        public void SaveCoffeeListInJsonFile(List<Coffee> coffeeList)
+        public void SaveCoffeeInJsonFile(List<Coffee> coffeeList)
         {
-            string appDataDirPath = AppUtils.GetDesktopDirectoryPath();
-            string coffeeListFilePath = AppUtils.GetCofeeListFilePath();
+            string appDataDirPath = AppUtils.GetAppDirectoryPath();
+            string coffeeListFilePath = AppUtils.GetCoffeeFilePath();
 
             if (!Directory.Exists(appDataDirPath))
             {
@@ -36,9 +33,9 @@ namespace Bislerium.Service
             File.WriteAllText(coffeeListFilePath, json);
         }
 
-        public List<Coffee> GetCoffeeListFromJsonFile()
+        public List<Coffee> GetCoffeeFromJsonFile()
         {
-            string coffeeListFilePath = AppUtils.GetCofeeListFilePath();
+            string coffeeListFilePath = AppUtils.GetCoffeeFilePath();
 
             if (!File.Exists(coffeeListFilePath))
             {
@@ -51,26 +48,26 @@ namespace Bislerium.Service
         }
 
         //This Function create a list of JSON Coffee List in the Computer just for one timne
-        public void SeedCofeeDetails()
+        public void SeedCoffeeDetails()
         {
-            List<Coffee> coffeeList = GetCoffeeListFromJsonFile();
+            List<Coffee> coffeeList = GetCoffeeFromJsonFile();
 
             if (coffeeList.Count == 0)
             {
-                SaveCoffeeListInJsonFile(_coffeeList);
+                SaveCoffeeInJsonFile(_coffeeList);
             }
         }
 
-        public Coffee GetCofeeDetailsByID(String coffeeID)
+        public Coffee GetCoffeeDetailsByID(String coffeeID)
         {
-            List<Coffee> coffeeList = GetCoffeeListFromJsonFile();
+            List<Coffee> coffeeList = GetCoffeeFromJsonFile();
             Coffee coffee = coffeeList.FirstOrDefault(coffee => coffee.Id.ToString() == coffeeID);
             return coffee;
         }
 
-        public void UpdateCofeeDetails(Coffee coffee)
+        public void UpdateCoffeeDetails(Coffee coffee)
         {
-            List<Coffee> coffeeList = GetCoffeeListFromJsonFile();
+            List<Coffee> coffeeList = GetCoffeeFromJsonFile();
 
             Coffee coffeeToUpdate = coffeeList.FirstOrDefault(_coffee => _coffee.Id.ToString() == coffee.Id.ToString());
 
@@ -82,7 +79,7 @@ namespace Bislerium.Service
             coffeeToUpdate.CoffeeType = coffee.CoffeeType;
             coffeeToUpdate.Price = coffee.Price;
 
-            SaveCoffeeListInJsonFile(coffeeList);
+            SaveCoffeeInJsonFile(coffeeList);
         }
 
     }

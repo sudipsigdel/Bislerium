@@ -6,6 +6,10 @@
     <MudAppBar>
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
         <MudSpacer />
+        @if (_globalState.CurrentUser != null)
+        {
+            <h4> @_globalState.CurrentUser.Role</h4>
+        }
         <MudIconButton Icon="@Icons.Material.Filled.Logout" Color="Color.Inherit"  OnClick="@((e) => ShowModel())" />
     </MudAppBar>
 
@@ -13,7 +17,19 @@
         <MudDrawerHeader>
             <MudText Typo="Typo.h6">Bislerium</MudText>
         </MudDrawerHeader>
-        <MyNavMenu/>
+        
+        <MudNavMenu>
+            <MudNavLink Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
+            <MudNavLink Href="/coffee" Match="NavLinkMatch.Prefix">Coffee</MudNavLink>
+            <MudNavLink Href="/addins" Match="NavLinkMatch.Prefix">Addins</MudNavLink>
+            @*
+            @if (_globalState.CurrentUser.Role.ToString() == "Admin")
+            {
+            <MudNavLink Href="/edit" Match="NavLinkMatch.Prefix">Edit</MudNavLink>
+            }
+            *@
+            <MudNavLink Href="/cart" Match="NavLinkMatch.Prefix">Cart</MudNavLink>
+        </MudNavMenu>
     </MudDrawer>
 
     <MudMainContent>
@@ -22,6 +38,9 @@
 </MudLayout>
 
 @code {
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+
     bool _drawerOpen = true;
 
     void DrawerToggle()

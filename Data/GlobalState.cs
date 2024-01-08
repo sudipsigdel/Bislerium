@@ -10,5 +10,6 @@ namespace Bislerium.Data
     {
         public User CurrentUser { get; set; }
         public string AppBarTitle { get; set; }
+        public List<OrderItem> OrderItems { get; set; } = new();
     }
 }

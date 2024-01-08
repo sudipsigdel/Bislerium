@@ -61,6 +61,5 @@ wwwroot\Bislerium.styles.css
 wwwroot\Bislerium.bundle.scp.css
 AboutAssets.txt
 Shared\MainLayout.razor.css
-Shared\MyNavMenu.razor.css
 wwwroot\favicon.ico
 wwwroot\index.html

@@ -18,8 +18,10 @@ namespace Bislerium
 
             builder.Services.AddMauiBlazorWebView();
             builder.Services.AddMudServices();
+            builder.Services.AddSingleton<CoffeeServices>();
+            builder.Services.AddSingleton<AddinsServices>();
             builder.Services.AddSingleton<UserServices>();
-            //builder.Services.AddSingleton<CoffeeServices>();
+            builder.Services.AddSingleton<OrderItemsServices>();
 
 
 #if DEBUG

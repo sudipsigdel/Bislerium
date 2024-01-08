@@ -1,4 +1,8 @@
 ﻿@inherits LayoutComponentBase
+
+@inject CoffeeServices CoffeeServices
+@inject AddinsServices AddinsServices
+
 <MudThemeProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
@@ -9,7 +13,13 @@
     </CascadingValue>
 </MudLayout>
 
-@code{
+@code {
     private GlobalState _globalState = new();
+
+    protected override void OnInitialized()
+    {
+        CoffeeServices.SeedCoffeeDetails();
+        AddinsServices.SeedAddinsDetails();
+    }
 
 }
