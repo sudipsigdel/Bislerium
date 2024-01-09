@@ -2,6 +2,9 @@ wwwroot\_content\MudBlazor\MudBlazor.min.css
 wwwroot\_content\MudBlazor\MudBlazor.min.js
 Bislerium Cafe Data\addins.json
 Bislerium Cafe Data\coffee.json
+Bislerium Cafe Data\customer.json
+Bislerium Cafe Data\orderItem.json
+Bislerium Cafe Data\orders.json
 OpenSans-Regular.ttf
 appicon.ico
 appiconLargeTile.scale-100.png
@@ -49,6 +52,7 @@ appiconWideTile.scale-125.png
 appiconWideTile.scale-150.png
 appiconWideTile.scale-200.png
 appiconWideTile.scale-400.png
+bislerium.scale-100.png
 dotnet_bot.scale-100.png
 dotnet_bot.scale-125.png
 dotnet_bot.scale-150.png
@@ -68,4 +72,5 @@ Pages\CoffeeEditAdmin.razor.css
 AboutAssets.txt
 Shared\MainLayout.razor.css
 wwwroot\favicon.ico
+wwwroot\images\bislerium.png
 wwwroot\index.html

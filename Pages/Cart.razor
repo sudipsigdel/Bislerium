@@ -3,7 +3,10 @@
 @using System.Diagnostics;
 @inject CoffeeServices CoffeeServices
 @inject OrderItemsServices OrderItemsServices
-@inject AddinsServices AddInsServices
+@inject AddinsServices AddinsServices
+@inject CustomerServices CustomerServices
+@inject NavigationManager NavigationManager
+@inject ISnackbar Snackbar
 
 <MudTable Items="@Elements"
           Dense=true
@@ -11,27 +14,31 @@
           Striped=true
           Style="margin: 30px">
 
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Cart</MudText>
+    </ToolBarContent>
+
     <HeaderContent>
         <MudTh>Item Name</MudTh>
         <MudTh>Item Type</MudTh>
-        <MudTh>Price</MudTh>
+        <MudTh>Price (Rs)</MudTh>
         <MudTh>Quantity</MudTh>
         <MudTh>Total</MudTh>
         <MudTh>Action</MudTh>
     </HeaderContent>
 
     <RowTemplate>
-        <MudTd DataLabel="Item Name">@context.Name</MudTd>
+                <MudTd DataLabel="Item Name">@context.Name</MudTd>
 
             <MudTd DataLabel="Item Type">@context.ItemType</MudTd>
 
-            <MudTd DataLabel="Price">Rs.@context.Price</MudTd>
+            <MudTd DataLabel="Price">@context.Price</MudTd>
 
             <MudTd DataLabel="Quantity">
                 <MudIconButton Icon="@Icons.Material.Filled.Remove" aria-label="subtract" OnClick="@(() => QuantityUpdate(context.OrderItemID, "sub"))"></MudIconButton>
                 <span>
                     @context.Quantity
-            </span>
+                </span>
             <MudIconButton Icon="@Icons.Material.Filled.Add" aria-label="add" OnClick="@(() => QuantityUpdate(context.OrderItemID, "add"))"></MudIconButton>
         </MudTd>
 
@@ -45,12 +52,18 @@
     </MudTable>
 
     <MudSpacer />
+        
 
     <MudText Style="margin: 30px" Typo="Typo.subtitle1">Total Price: <b>Rs.@_totalAmount</b></MudText>
+    
+    <MudText Style="margin: 0 30px" Typo="Typo.subtitle1">Enter phone number to check out:</MudText>
+    <MudSpacer/>
+    <MudTextField Style="margin: 0 30px 30px 30px" @bind-Value="_phone" Variant="Variant.Outlined"></MudTextField>
 
-<MudContainer Class="d-flex justify-content-end">
+
+<MudContainer Style="margin: 0 0 30px 10px">
     <MudButton Variant="Variant.Filled" OnClick="clearAllCartData" Class="mr-3">Clear</MudButton>
-    <MudButton Variant="Variant.Filled" Color="Color.Primary">Checkout</MudButton>
+    <MudButton Variant="Variant.Filled" OnClick="customerCheck" Color="Color.Primary">Checkout</MudButton>
 </MudContainer>
 
 @code {
@@ -59,26 +72,31 @@
 
     private double _totalAmount { set; get; } = 0;
 
+    private string _phone { set; get; }
+
+    private string _message { set; get; } = "";
 
     private IEnumerable<OrderItem> Elements = new List<OrderItem>();
 
     private Coffee _coffee { set; get; }
-    //calculate the total amount of the cart
+
     private double calculateTotalAmount()
     {
         double totalAmount = 0;
-        //calculate the total amount from the list OrderList data.
+
         foreach (var item in Elements)
         {
             totalAmount += item.TotalPrice;
         }
         return totalAmount;
     }
-    //remove the existing data
+
     private void clearAllCartData()
     {
         _globalState.OrderItems.Clear();
         _totalAmount = calculateTotalAmount();
+        _message = "";
+        Snackbar.Add("Cleared", Severity.Info);
     }
 
     private void handleDeleteCartItem(Guid orderItemID)
@@ -86,7 +104,7 @@
         OrderItemsServices.DeleteItemInOrderItemsList(_globalState.OrderItems, orderItemID);
         _totalAmount = calculateTotalAmount();
     }
-    //Code to update the quantity of the item using add or subtract
+
     private void QuantityUpdate(Guid orderItemID, string action)
     {
         OrderItemsServices.QuantityOfItemList(_globalState.OrderItems, orderItemID, action);
@@ -100,4 +118,29 @@
         _totalAmount = calculateTotalAmount();
     }
 
+    private void customerCheck()
+    {
+        if (_globalState.OrderItems.Count() == 0)
+        {
+            _message = "Cart Is Empty!!!";
+            Snackbar.Add(@_message, Severity.Error);
+            return;
+        }
+        if (string.IsNullOrEmpty(_phone))
+        {
+            _message = "Please provide Phone Number";
+            Snackbar.Add(@_message, Severity.Error);
+            return;
+        }
+        Customer customer = CustomerServices.getCustomerFromPhone(_phone);
+        if (customer == null)
+        {
+            NavigationManager.NavigateTo("/register");
+            Snackbar.Add("User Not Registered!", Severity.Warning);
+        }
+        else
+        {
+            NavigationManager.NavigateTo($"/invoice/{customer.CustomerPhone}");
+        }
+    }
 }

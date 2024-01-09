@@ -1,0 +1,77 @@
+﻿@page "/history"
+
+@using Bislerium.Data
+@inject NavigationManager NavManager
+@inject OrderItemsServices OrderItemsServices
+@inject OrderServices OrderServices
+@inject ISnackbar Snackbar
+
+
+@if (_message != "")
+{
+    Snackbar.Add(@_message, Severity.Error);
+}
+
+<MudTable Items="@Elements"
+          Dense=true
+          Hover=true
+          Bordered=true
+          Striped=true
+          Style="margin: 30px">
+
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Order History</MudText>
+    </ToolBarContent>
+
+
+    <HeaderContent>
+        <MudTh>Item Name</MudTh>
+        <MudTh>Type</MudTh>
+        <MudTh>Quantity</MudTh>
+        <MudTh>Amount</MudTh>
+        <MudTh>Customer Name</MudTh>
+        <MudTh>Worker</MudTh>
+        <MudTh>Order Date</MudTh>
+    </HeaderContent>
+
+    <RowTemplate>
+        <MudTd DataLabel="Item Type">@context.Name</MudTd>
+            <MudTd DataLabel="Item Name">@context.ItemType</MudTd>
+
+            <MudTd DataLabel="Price">@context.Quantity </MudTd>
+            <MudTd DataLabel="Price">Rs.@context.TotalPrice </MudTd>
+            @foreach (Order order in Data)
+        {
+            @foreach (OrderItem orderItemDetails in order.OrderItems)
+            {
+                @if (orderItemDetails.OrderItemID == @context.OrderItemID)
+                {
+                    <MudTd DataLabel="Customer">@order.CustomerName</MudTd>
+                    <MudTd DataLabel="Customer">@order.EmployeeRole</MudTd>
+                    <MudTd DataLabel="Customer">@order.OrderDateTime</MudTd>
+                    return;
+                }
+            }
+        }
+    </RowTemplate>
+
+    <PagerContent>
+        <MudTablePager />
+    </PagerContent>
+</MudTable>
+
+
+@code {
+    [CascadingParameter]
+    private string phone { set; get; }
+    private string _message { set; get; } = "";
+
+    private IEnumerable<OrderItem> Elements = new List<OrderItem>();
+    private List<Order> Data = new();
+
+    protected override void OnInitialized()
+    {
+        Elements = OrderItemsServices.GetOrderListFromJsonFile();
+        Data = OrderServices.GetOrdersFromJsonFile();
+    }
+}

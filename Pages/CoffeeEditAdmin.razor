@@ -7,10 +7,13 @@
 @using Bislerium.Data
 
 <table id="customers">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Edit Coffee</MudText>
+    </ToolBarContent>
     <tr>
         <th>Name</th>
         <th>Price</th>
-        <th>Edit Details</th>
+        <th><center>Edit Details</center></th>
     </tr>
 
     @foreach (Data.Coffee item in Elements)
@@ -18,9 +21,9 @@
         <tr>
             <td>@item.CoffeeType</td>
             <td>@item.Price</td>
-            <td>
+            <td><center>
                 <MudIconButton Color="Color.Secondary" Icon="@Icons.Material.Filled.Edit" aria-label="Edit" OnClick="@(()  => NavigationManager.NavigateTo($"/coffeeedit/{item.Id}"))"> </MudIconButton>
-            </td>
+            </center></td>
         </tr>
     }
 </table>

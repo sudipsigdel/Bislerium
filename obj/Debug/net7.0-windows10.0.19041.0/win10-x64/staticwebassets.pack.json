@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Acer\\OneDrive\\Desktop\\Bislerium\\wwwroot\\images\\bislerium.png",
+      "PackagePath": "staticwebassets\\images\\bislerium.png"
+    },
+    {
       "Id": "C:\\Users\\Acer\\OneDrive\\Desktop\\Bislerium\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },

@@ -1,4 +1,6 @@
-﻿namespace Bislerium.Data
+﻿using System.Text.Json;
+
+namespace Bislerium.Data
 {
     public class OrderItemsServices
     {
@@ -64,6 +66,38 @@
                     _orderItems.Remove(orderItem);
                 }
             }
+        }
+
+        public List<OrderItem> GetOrderListFromJsonFile()
+        {
+            string orderListFilePath = AppUtils.GetOrderItemListPath();
+
+            if (!File.Exists(orderListFilePath))
+            {
+                return new List<OrderItem>();
+            }
+
+            var json = File.ReadAllText(orderListFilePath);
+
+            return JsonSerializer.Deserialize<List<OrderItem>>(json);
+        }
+
+        public void SaveOrderList(OrderItem order)
+        {
+            List<OrderItem> orders = GetOrderListFromJsonFile();
+            orders.Add(order);
+
+            string appDataDirPath = AppUtils.GetAppDirectoryPath();
+            string orderListFilePath = AppUtils.GetOrderItemListPath();
+
+            if (!Directory.Exists(appDataDirPath))
+            {
+                Directory.CreateDirectory(appDataDirPath);
+            }
+
+            var json = JsonSerializer.Serialize(orders);
+
+            File.WriteAllText(orderListFilePath, json);
         }
     }
 }

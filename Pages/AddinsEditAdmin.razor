@@ -7,10 +7,13 @@
 @using Bislerium.Data
 
 <table id="customers">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Edit Addins</MudText>
+    </ToolBarContent>
     <tr>
         <th>Name</th>
         <th>Price</th>
-        <th>Edit Details</th>
+        <th><center>Edit Details</center></th>
     </tr>
 
     @foreach (Data.Addins item in Elements)
@@ -18,9 +21,9 @@
         <tr>
             <td>@item.AddinsType</td>
             <td>@item.Price</td>
-            <td>
+            <td><center>
                 <MudIconButton Color="Color.Secondary" Icon="@Icons.Material.Filled.Edit" aria-label="Edit" OnClick="@(()  => NavigationManager.NavigateTo($"/addinsedit/{item.Id}"))"> </MudIconButton>
-            </td>
+            </center></td>
         </tr>
     }
 </table>

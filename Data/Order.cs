@@ -1,13 +1,14 @@
-﻿namespace Bislerium.Data.Models
+﻿namespace Bislerium.Data
 {
     public class Order
     {
         public Guid OrderID { get; set; } = Guid.NewGuid();
         public Guid CustomerID { get; set; }
-        public String EmployeeUserName { get; set; }
-        public DateTime OrderDate { get; set; }
-        public DateTime OrderTime { get; set; }
-        public Customer Customer { get; set; }
-
+        public string CustomerName { get; set; }
+        public string CustomerPhone { get; set; }
+        public String EmployeeRole { get; set; }
+        public DateTime OrderDateTime { get; set; } = DateTime.Now;
+        public List<OrderItem> OrderItems { get; set; }
+        public Double OrderTotalAmount { get; set; }
     }
 }

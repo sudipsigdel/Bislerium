@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iHmHRApr5N3snep3obq60Ev5Wggxi+R2hCMlBBVRNgk=",
+  "Hash": "g9tefrAh3KiwlAK7zOvLdhGJiSMv9yRWIe9ho8JJajs=",
   "Source": "Bislerium",
   "BasePath": "/",
   "Mode": "Root",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Acer\\OneDrive\\Desktop\\Bislerium\\wwwroot\\images\\bislerium.png",
+      "SourceId": "Bislerium",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\OneDrive\\Desktop\\Bislerium\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/bislerium.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\bislerium.png"
     },
     {
       "Identity": "C:\\Users\\Acer\\OneDrive\\Desktop\\Bislerium\\wwwroot\\index.html",

@@ -1,0 +1,80 @@
+﻿@page "/register"
+
+@inject NavigationManager NavigationManager
+@inject CustomerServices CustomerServices
+@inject ISnackbar Snackbar
+
+
+<h1 style="margin: 30px">Register User</h1>
+@if (_message != "")
+{
+    Snackbar.Add(@_message, Severity.Warning);
+}
+
+
+<div Style="margin: 30px">
+    <div class="row">
+        <div class="col-6 d-flex flex-column gap-y-3">
+            <MudTextField @bind-Value="username" Label="Username" Variant="Variant.Outlined"></MudTextField>
+            <MudTextField @bind-Value="phoneNumber" Label="Phone" Variant="Variant.Outlined"></MudTextField>
+            <MudTextField @bind-Value="address" Label="Address" Variant="Variant.Outlined"></MudTextField>
+        </div>
+    </div>
+    <MudContainer >
+        <MudButton Style="margin: 0 20px 0 -20px" Variant="Variant.Filled" OnClick="goBack" Color="Color.Transparent" Class="mt-5">Cancel</MudButton>
+        <MudButton Variant="Variant.Filled" OnClick="createCustomer" Color="Color.Primary" Class="mt-5">
+            Register
+        </MudButton>
+    </MudContainer>
+</div>
+
+@code {
+
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+    private string phoneNumber { get; set; }
+    private string username { get; set; }
+    private string address { get; set; }
+
+
+    private string _message { get; set; } = "";
+    private bool _isSuccess { get; set; } = false;
+
+    private void createCustomer()
+    {
+        try
+        {
+            if (string.IsNullOrEmpty(phoneNumber))
+            {
+                _message = "Please Provide Phone Number";
+                Snackbar.Add(@_message, Severity.Error);
+                return;
+            }
+            else if (string.IsNullOrEmpty(username))
+            {
+                _message = "Please Provide Username";
+                Snackbar.Add(@_message, Severity.Error);
+                return;
+            }
+            else if (string.IsNullOrEmpty(address))
+            {
+                _message = "Please Provide Address";
+                Snackbar.Add(@_message, Severity.Error);
+                return;
+            }
+            CustomerServices.addCustomerInJson(username, phoneNumber, address);
+            _message = "User Created Successfully";
+            Snackbar.Add(@_message, Severity.Success);
+            NavigationManager.NavigateTo($"/invoice/{phoneNumber}");
+        }
+        catch (Exception e)
+        {
+            _message = e.Message;
+        }
+    }
+
+    private void goBack()
+    {
+        NavigationManager.NavigateTo("/cart");
+    }
+}

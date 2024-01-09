@@ -43,6 +43,15 @@
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\coffee.json">
       <PackagePath>Bislerium Cafe Data\coffee.json</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\customer.json">
+      <PackagePath>Bislerium Cafe Data\customer.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\orderItem.json">
+      <PackagePath>Bislerium Cafe Data\orderItem.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\orders.json">
+      <PackagePath>Bislerium Cafe Data\orders.json</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.deps.json">
       <PackagePath>Bislerium.deps.json</PackagePath>
     </AppxPackagedFile>
@@ -784,6 +793,9 @@
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\wwwroot\favicon.ico">
       <PackagePath>wwwroot\favicon.ico</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\wwwroot\images\bislerium.png">
+      <PackagePath>wwwroot\images\bislerium.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
     </AppxPackagedFile>
@@ -942,6 +954,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bislerium.scale-100.png">
+      <PackagePath>bislerium.scale-100.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>

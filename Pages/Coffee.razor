@@ -9,10 +9,14 @@
 
 
 <table id="customers">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Coffee</MudText>
+    </ToolBarContent>
+
     <tr>
         <th>Name</th>
         <th>Price</th>
-        <th>Add to Cart</th>
+        <th><center>Add to Cart</center></th>
     </tr>
 
     @foreach (Data.Coffee item in Elements)
@@ -20,13 +24,14 @@
         <tr>
             <td>@item.CoffeeType</td>
             <td>@item.Price</td>
-            <td>
+            <td> <center>
                 <MudFab Color="Color.Primary"
                         StartIcon="@Icons.Material.Filled.ShoppingCart"
                         Size="Size.Medium"
                         OnClick="@(() => { AddItemInCart(item.Id, item.Price, item.CoffeeType); Snackbar.Add("Added to Cart", Severity.Success); })"
                         aria-label="Add" />
-                </td>
+                </center>
+            </td>
         </tr>
     }
 </table>

@@ -18,7 +18,7 @@
         {
             return Path.Combine(GetAppDirectoryPath(), "addins.json");
         }
-        public static string GetCustomerCoffeePath()
+        public static string GetCustomerPath()
         {
             return Path.Combine(GetAppDirectoryPath(), "customer.json");
         }

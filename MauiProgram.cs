@@ -21,17 +21,19 @@ namespace Bislerium
             builder.Services.AddMudServices();
             builder.Services.AddMudServices(config =>
             {
-                config.SnackbarConfiguration.VisibleStateDuration = 1000;
+                config.SnackbarConfiguration.VisibleStateDuration = 2000;
                 config.SnackbarConfiguration.HideTransitionDuration = 200;
                 config.SnackbarConfiguration.ShowTransitionDuration = 200;
                 config.SnackbarConfiguration.MaxDisplayedSnackbars = 6;
                 config.SnackbarConfiguration.PositionClass = Defaults.Classes.Position.BottomStart;
             });
 
-            builder.Services.AddSingleton<CoffeeServices>();
             builder.Services.AddSingleton<AddinsServices>();
-            builder.Services.AddSingleton<UserServices>();
+            builder.Services.AddSingleton<CoffeeServices>();
+            builder.Services.AddSingleton<CustomerServices>();
+            builder.Services.AddSingleton<OrderServices>();
             builder.Services.AddSingleton<OrderItemsServices>();
+            builder.Services.AddSingleton<UserServices>();
 
 
 #if DEBUG
