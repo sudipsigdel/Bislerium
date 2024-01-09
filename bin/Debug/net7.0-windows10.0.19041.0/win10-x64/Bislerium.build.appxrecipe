@@ -37,6 +37,12 @@
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Bislerium.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\addins.json">
+      <PackagePath>Bislerium Cafe Data\addins.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\coffee.json">
+      <PackagePath>Bislerium Cafe Data\coffee.json</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.deps.json">
       <PackagePath>Bislerium.deps.json</PackagePath>
     </AppxPackagedFile>
@@ -952,8 +958,20 @@
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Pages\Coffee.razor.css">
+      <PackagePath>Pages\Coffee.razor.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Pages\CoffeeEditAdmin.razor.css">
+      <PackagePath>Pages\CoffeeEditAdmin.razor.css</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Shared\MainLayout.razor.css">
       <PackagePath>Shared\MainLayout.razor.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Pages\AddinsEditAdmin.razor.css">
+      <PackagePath>Pages\AddinsEditAdmin.razor.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Pages\Addins.razor.css">
+      <PackagePath>Pages\Addins.razor.css</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

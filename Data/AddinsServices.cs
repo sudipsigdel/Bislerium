@@ -11,7 +11,7 @@ namespace Bislerium.Data
             new() { AddinsType = "Milk", Price = 25 },
             new() { AddinsType = "Flavored Syrup", Price = 30 },
             new() { AddinsType = "Cinnamon", Price = 15 },
-            new() { AddinsType = "Chocolate/Cocoa Powder", Price = 25 },
+            new() { AddinsType = "Cocoa Powder", Price = 25 },
             new() { AddinsType = "Whipped Cream", Price = 40 },
             new() { AddinsType = "Condensed Milk", Price = 35 },
             new() { AddinsType = "Butter", Price = 30 },

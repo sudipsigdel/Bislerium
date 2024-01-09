@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bislerium.Data
 {
+
     public class Addins
     {
         public Guid Id { get; set; } = Guid.NewGuid();

@@ -1,5 +1,7 @@
 wwwroot\_content\MudBlazor\MudBlazor.min.css
 wwwroot\_content\MudBlazor\MudBlazor.min.js
+Bislerium Cafe Data\addins.json
+Bislerium Cafe Data\coffee.json
 OpenSans-Regular.ttf
 appicon.ico
 appiconLargeTile.scale-100.png
@@ -59,6 +61,10 @@ splashSplashScreen.scale-200.png
 splashSplashScreen.scale-400.png
 wwwroot\Bislerium.styles.css
 wwwroot\Bislerium.bundle.scp.css
+Pages\Addins.razor.css
+Pages\AddinsEditAdmin.razor.css
+Pages\Coffee.razor.css
+Pages\CoffeeEditAdmin.razor.css
 AboutAssets.txt
 Shared\MainLayout.razor.css
 wwwroot\favicon.ico

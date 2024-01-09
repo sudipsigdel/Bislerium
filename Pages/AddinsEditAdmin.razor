@@ -1,0 +1,39 @@
+﻿@page "/addinsedit"
+
+@using System.Diagnostics;
+@inject AddinsServices AddinsServices
+@inject OrderItemsServices OrderItemsServices
+@inject NavigationManager NavigationManager
+@using Bislerium.Data
+
+<table id="customers">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Edit Details</th>
+    </tr>
+
+    @foreach (Data.Addins item in Elements)
+    {
+        <tr>
+            <td>@item.AddinsType</td>
+            <td>@item.Price</td>
+            <td>
+                <MudIconButton Color="Color.Secondary" Icon="@Icons.Material.Filled.Edit" aria-label="Edit" OnClick="@(()  => NavigationManager.NavigateTo($"/addinsedit/{item.Id}"))"> </MudIconButton>
+            </td>
+        </tr>
+    }
+</table>
+
+@code {
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+
+    private IEnumerable<Data.Addins> Elements { get; set; } = new List<Data.Addins>();
+
+    protected override void OnInitialized()
+    {
+        Elements = AddinsServices.GetAddinsFromJsonFile();
+        _globalState.AppBarTitle = "Items";
+    }
+}

@@ -1,8 +1,53 @@
 ﻿@page "/coffee"
+
+@using System.Diagnostics;
 @inject CoffeeServices CoffeeServices
-@inject OrderItemsServices OrderItemsServices 
+@inject OrderItemsServices OrderItemsServices
 @inject NavigationManager NavigationManager
+@using Bislerium.Data;
+@inject ISnackbar Snackbar
 
 
-<MudText Style="margin: 20px" Typo="Typo.h5">Coffee List</MudText>
+<table id="customers">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Add to Cart</th>
+    </tr>
 
+    @foreach (Data.Coffee item in Elements)
+    {
+        <tr>
+            <td>@item.CoffeeType</td>
+            <td>@item.Price</td>
+            <td>
+                <MudFab Color="Color.Primary"
+                        StartIcon="@Icons.Material.Filled.ShoppingCart"
+                        Size="Size.Medium"
+                        OnClick="@(() => { AddItemInCart(item.Id, item.Price, item.CoffeeType); Snackbar.Add("Added to Cart", Severity.Success); })"
+                        aria-label="Add" />
+                </td>
+        </tr>
+    }
+</table>
+
+
+@code {
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+
+    private IEnumerable<Data.Coffee> Elements { get; set; } = new List<Data.Coffee>();
+
+    protected override void OnInitialized()
+    {
+        Elements = CoffeeServices.GetCoffeeFromJsonFile();
+        _globalState.AppBarTitle = "Items";
+    }
+
+    //takes the id of the coffee and price of the coffee
+    private void AddItemInCart(Guid addInItemID, double itemPrice, string name)
+    {
+        //calls the addItem in orderItemList
+        OrderItemsServices.AddItemInOrderList(_globalState.OrderItems, addInItemID, "Coffee", itemPrice, name);
+    }
+}

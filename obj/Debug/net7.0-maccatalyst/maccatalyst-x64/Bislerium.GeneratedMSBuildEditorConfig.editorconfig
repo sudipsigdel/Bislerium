@@ -43,10 +43,10 @@ build_metadata.AdditionalFiles.TargetPath = TWFpbi5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/OneDrive/Desktop/Bislerium/Pages/Addins.razor]
+[C:/Users/Acer/OneDrive/Desktop/Bislerium/Pages/AddinsEdit.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaW5zLnJhem9y
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaW5zRWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -57,17 +57,10 @@ build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Acer/OneDrive/Desktop/Bislerium/Pages/Coffee.razor]
+[C:/Users/Acer/OneDrive/Desktop/Bislerium/Pages/CoffeeEdit.razor]
 build_metadata.AdditionalFiles.GenKind = 
 build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29mZmVlLnJhem9y
-build_metadata.AdditionalFiles.RelativePath = 
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Acer/OneDrive/Desktop/Bislerium/Pages/Edit.razor]
-build_metadata.AdditionalFiles.GenKind = 
-build_metadata.AdditionalFiles.ManifestResourceName = 
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29mZmVlRWRpdC5yYXpvcg==
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -112,6 +105,34 @@ build_metadata.AdditionalFiles.ManifestResourceName =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.RelativePath = 
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/OneDrive/Desktop/Bislerium/Pages/Addins.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaW5zLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = b-0dyporh45l
+
+[C:/Users/Acer/OneDrive/Desktop/Bislerium/Pages/AddinsEditAdmin.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkaW5zRWRpdEFkbWluLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = b-m33y8fkysn
+
+[C:/Users/Acer/OneDrive/Desktop/Bislerium/Pages/Coffee.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29mZmVlLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = b-cl1wtu9uwv
+
+[C:/Users/Acer/OneDrive/Desktop/Bislerium/Pages/CoffeeEditAdmin.razor]
+build_metadata.AdditionalFiles.GenKind = 
+build_metadata.AdditionalFiles.ManifestResourceName = 
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29mZmVlRWRpdEFkbWluLnJhem9y
+build_metadata.AdditionalFiles.RelativePath = 
+build_metadata.AdditionalFiles.CssScope = b-hy4obwaytd
 
 [C:/Users/Acer/OneDrive/Desktop/Bislerium/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.GenKind = 

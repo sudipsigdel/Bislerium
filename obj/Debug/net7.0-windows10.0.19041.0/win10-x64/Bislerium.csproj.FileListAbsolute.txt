@@ -353,6 +353,30 @@ C:\Users\Acer\OneDrive\Desktop\BSc. Hons Computing\3rd Year\1st Sem\Application 
 C:\Users\Acer\OneDrive\Desktop\BSc. Hons Computing\3rd Year\1st Sem\Application Development\Coursework\bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
 C:\Users\Acer\OneDrive\Desktop\BSc. Hons Computing\3rd Year\1st Sem\Application Development\Coursework\bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\Shared\MainLayout.razor.rz.scp.css
 C:\Users\Acer\OneDrive\Desktop\BSc. Hons Computing\3rd Year\1st Sem\Application Development\Coursework\bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\Shared\MyNavMenu.razor.rz.scp.css
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.csproj.AssemblyReference.cache
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets.build.json
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets.development.json
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.Bislerium.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.build.Bislerium.props
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.buildMultiTargeting.Bislerium.props
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.buildTransitive.Bislerium.props
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets.pack.json
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\Bislerium.styles.css
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\Bislerium.bundle.scp.css
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets.publish.json
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauiimage.inputs
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauifont.inputs
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauisplash.inputs
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauimanifest.stamp
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.cs
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium Cafe Data\addins.json
 C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.exe
 C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
 C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.deps.json
@@ -598,29 +622,6 @@ C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\wi
 C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\msquic.dll
 C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Microsoft.Windows.SDK.NET.dll
 C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\WinRT.Runtime.dll
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.csproj.AssemblyReference.cache
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets.build.json
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets.development.json
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.Bislerium.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.build.Bislerium.props
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.buildMultiTargeting.Bislerium.props
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets\msbuild.buildTransitive.Bislerium.props
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets.pack.json
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\Shared\MainLayout.razor.rz.scp.css
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\bundle\Bislerium.styles.css
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\projectbundle\Bislerium.bundle.scp.css
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\staticwebassets.publish.json
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauiimage.inputs
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauifont.inputs
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauisplash.inputs
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\mauimanifest.stamp
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.cs
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png
@@ -684,6 +685,7 @@ C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\wi
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.AssemblyInfoInputs.cache
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.AssemblyInfo.cs
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.csproj.CoreCompileInputs.cache
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.sourcelink.json
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\XamlC.stamp
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.csproj.CopyComplete
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.dll
@@ -707,4 +709,8 @@ C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\wi
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
-C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.sourcelink.json
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\Pages\Addins.razor.rz.scp.css
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\Pages\Coffee.razor.rz.scp.css
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium Cafe Data\coffee.json
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\Pages\AddinsEditAdmin.razor.rz.scp.css
+C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\Pages\CoffeeEditAdmin.razor.rz.scp.css

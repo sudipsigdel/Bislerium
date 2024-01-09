@@ -4,12 +4,12 @@
     {
         public static string GetAppDirectoryPath()
         {
+            string customPath = @"C:\Users\Acer\OneDrive\Desktop\Bislerium\";
+            
             return Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-                "Cafe Data"
+               customPath, "Bislerium Cafe Data"
             );
         }
-
         public static string GetCoffeeFilePath()
         {
             return Path.Combine(GetAppDirectoryPath(), "coffee.json");
@@ -18,16 +18,17 @@
         {
             return Path.Combine(GetAppDirectoryPath(), "addins.json");
         }
-        
-         public static string GetCustomerCoffeePath()
-       {
-           return Path.Combine(GetAppDirectoryPath(), "customer.json");
-       }
-
+        public static string GetCustomerCoffeePath()
+        {
+            return Path.Combine(GetAppDirectoryPath(), "customer.json");
+        }
        public static string GetOrderListPath()
        {
            return Path.Combine(GetAppDirectoryPath(), "orders.json");
        }
-
+       public static string GetOrderItemListPath()
+       {
+           return Path.Combine(GetAppDirectoryPath(), "orderItem.json");
+       }
     }
 }

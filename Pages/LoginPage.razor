@@ -2,6 +2,7 @@
 @layout LoginLayout
 @inject UserServices UserServices
 @inject NavigationManager NavManager
+@inject ISnackbar Snackbar
 
 @using System.Diagnostics;
 @using Bislerium.Data;
@@ -21,7 +22,7 @@
 
                         @if (!string.IsNullOrEmpty(_errorMessage))
                         {
-                            <MudAlert Severity="Severity.Error">@_errorMessage</MudAlert>
+                            Snackbar.Add(_errorMessage, Severity.Error);
                         }
                 </MudCardContent>
 

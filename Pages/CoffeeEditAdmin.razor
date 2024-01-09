@@ -1,0 +1,39 @@
+﻿@page "/coffeeedit"
+
+@using System.Diagnostics;
+@inject CoffeeServices CoffeeServices
+@inject OrderItemsServices OrderItemsServices
+@inject NavigationManager NavigationManager
+@using Bislerium.Data
+
+<table id="customers">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Edit Details</th>
+    </tr>
+
+    @foreach (Data.Coffee item in Elements)
+    {
+        <tr>
+            <td>@item.CoffeeType</td>
+            <td>@item.Price</td>
+            <td>
+                <MudIconButton Color="Color.Secondary" Icon="@Icons.Material.Filled.Edit" aria-label="Edit" OnClick="@(()  => NavigationManager.NavigateTo($"/coffeeedit/{item.Id}"))"> </MudIconButton>
+            </td>
+        </tr>
+    }
+</table>
+
+@code {
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+
+    private IEnumerable<Data.Coffee> Elements { get; set; } = new List<Data.Coffee>();
+
+    protected override void OnInitialized()
+    {
+        Elements =CoffeeServices.GetCoffeeFromJsonFile();
+        _globalState.AppBarTitle = "Items";
+    }
+}

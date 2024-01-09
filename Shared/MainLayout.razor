@@ -22,13 +22,14 @@
             <MudNavLink Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
             <MudNavLink Href="/coffee" Match="NavLinkMatch.Prefix">Coffee</MudNavLink>
             <MudNavLink Href="/addins" Match="NavLinkMatch.Prefix">Addins</MudNavLink>
-            @*
-            @if (_globalState.CurrentUser.Role.ToString() == "Admin")
-            {
-            <MudNavLink Href="/edit" Match="NavLinkMatch.Prefix">Edit</MudNavLink>
-            }
-            *@
             <MudNavLink Href="/cart" Match="NavLinkMatch.Prefix">Cart</MudNavLink>
+            @if (_globalState.CurrentUser != null && _globalState.CurrentUser.Role.ToString() == "Admin")
+            {
+                <MudNavGroup Title="Edit Details" Expanded="true">
+                    <MudNavLink Href="/coffeeedit" Match="NavLinkMatch.Prefix">Coffee</MudNavLink>
+                    <MudNavLink Href="/addinsedit" Match="NavLinkMatch.Prefix">Addins</MudNavLink>
+                </MudNavGroup>
+            }
         </MudNavMenu>
     </MudDrawer>
 

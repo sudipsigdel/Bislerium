@@ -1,3 +1,107 @@
+/* /Pages/Addins.razor.rz.scp.css */
+#customers[b-0dyporh45l] {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 30px;
+}
+
+#customers td[b-0dyporh45l], #customers th[b-0dyporh45l] {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even)[b-0dyporh45l]{background-color: #f2f2f2;}
+
+#customers tr:hover[b-0dyporh45l] {background-color: #ddd;}
+
+#customers th[b-0dyporh45l] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #594ae2;
+  color: white;
+}
+/* /Pages/AddinsEditAdmin.razor.rz.scp.css */
+#customers[b-m33y8fkysn] {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 30px;
+}
+
+#customers td[b-m33y8fkysn], #customers th[b-m33y8fkysn] {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even)[b-m33y8fkysn]{background-color: #f2f2f2;}
+
+#customers tr:hover[b-m33y8fkysn] {background-color: #ddd;}
+
+#customers th[b-m33y8fkysn] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #594ae2;
+  color: white;
+}
+/* /Pages/Coffee.razor.rz.scp.css */
+#customers[b-cl1wtu9uwv] {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 30px;
+}
+
+    #customers td[b-cl1wtu9uwv], #customers th[b-cl1wtu9uwv] {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even)[b-cl1wtu9uwv] {
+        background-color: #f2f2f2;
+    }
+
+    #customers tr:hover[b-cl1wtu9uwv] {
+        background-color: #ddd;
+    }
+
+    #customers th[b-cl1wtu9uwv] {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #594ae2;
+        color: white;
+    }
+/* /Pages/CoffeeEditAdmin.razor.rz.scp.css */
+#customers[b-hy4obwaytd] {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+    margin: 30px;
+}
+
+    #customers td[b-hy4obwaytd], #customers th[b-hy4obwaytd] {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even)[b-hy4obwaytd] {
+        background-color: #f2f2f2;
+    }
+
+    #customers tr:hover[b-hy4obwaytd] {
+        background-color: #ddd;
+    }
+
+    #customers th[b-hy4obwaytd] {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #594ae2;
+        color: white;
+    }
 /* /Shared/MainLayout.razor.rz.scp.css */
 .page[b-fz4hx7tjmw] {
     position: relative;

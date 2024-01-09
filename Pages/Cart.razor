@@ -1,7 +1,103 @@
 ﻿@page "/cart"
 
-<h3>cart</h3>
+@using System.Diagnostics;
+@inject CoffeeServices CoffeeServices
+@inject OrderItemsServices OrderItemsServices
+@inject AddinsServices AddInsServices
+
+<MudTable Items="@Elements"
+          Dense=true
+          Bordered=true
+          Striped=true
+          Style="margin: 30px">
+
+    <HeaderContent>
+        <MudTh>Item Name</MudTh>
+        <MudTh>Item Type</MudTh>
+        <MudTh>Price</MudTh>
+        <MudTh>Quantity</MudTh>
+        <MudTh>Total</MudTh>
+        <MudTh>Action</MudTh>
+    </HeaderContent>
+
+    <RowTemplate>
+        <MudTd DataLabel="Item Name">@context.Name</MudTd>
+
+            <MudTd DataLabel="Item Type">@context.ItemType</MudTd>
+
+            <MudTd DataLabel="Price">Rs.@context.Price</MudTd>
+
+            <MudTd DataLabel="Quantity">
+                <MudIconButton Icon="@Icons.Material.Filled.Remove" aria-label="subtract" OnClick="@(() => QuantityUpdate(context.OrderItemID, "sub"))"></MudIconButton>
+                <span>
+                    @context.Quantity
+            </span>
+            <MudIconButton Icon="@Icons.Material.Filled.Add" aria-label="add" OnClick="@(() => QuantityUpdate(context.OrderItemID, "add"))"></MudIconButton>
+        </MudTd>
+
+        <MudTd DataLabel="Price">Rs.@context.TotalPrice</MudTd>
+
+            <MudTd DataLabel="Action">
+                <MudIconButton Color="Color.Error" Icon="@Icons.Material.Filled.Delete" aria-label="delete" OnClick="@(() => handleDeleteCartItem(context.OrderItemID))">
+                </MudIconButton>
+            </MudTd>
+        </RowTemplate>
+    </MudTable>
+
+    <MudSpacer />
+
+    <MudText Style="margin: 30px" Typo="Typo.subtitle1">Total Price: <b>Rs.@_totalAmount</b></MudText>
+
+<MudContainer Class="d-flex justify-content-end">
+    <MudButton Variant="Variant.Filled" OnClick="clearAllCartData" Class="mr-3">Clear</MudButton>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary">Checkout</MudButton>
+</MudContainer>
 
 @code {
+    [CascadingParameter]
+    private GlobalState _globalState { set; get; }
+
+    private double _totalAmount { set; get; } = 0;
+
+
+    private IEnumerable<OrderItem> Elements = new List<OrderItem>();
+
+    private Coffee _coffee { set; get; }
+    //calculate the total amount of the cart
+    private double calculateTotalAmount()
+    {
+        double totalAmount = 0;
+        //calculate the total amount from the list OrderList data.
+        foreach (var item in Elements)
+        {
+            totalAmount += item.TotalPrice;
+        }
+        return totalAmount;
+    }
+    //remove the existing data
+    private void clearAllCartData()
+    {
+        _globalState.OrderItems.Clear();
+        _totalAmount = calculateTotalAmount();
+    }
+
+    private void handleDeleteCartItem(Guid orderItemID)
+    {
+        OrderItemsServices.DeleteItemInOrderItemsList(_globalState.OrderItems, orderItemID);
+        _totalAmount = calculateTotalAmount();
+    }
+    //Code to update the quantity of the item using add or subtract
+    private void QuantityUpdate(Guid orderItemID, string action)
+    {
+        OrderItemsServices.QuantityOfItemList(_globalState.OrderItems, orderItemID, action);
+        _totalAmount = calculateTotalAmount();
+    }
+
+    protected override void OnInitialized()
+    {
+        Elements = _globalState.OrderItems;
+        _globalState.AppBarTitle = "Cart";
+        _totalAmount = calculateTotalAmount();
+    }
 
 }

@@ -1,0 +1,91 @@
+﻿@page "/addinsedit/{AddinsID}"
+
+@inject NavigationManager NavigationManager
+@inject AddinsServices AddinsServices
+@inject ISnackbar Snackbar
+
+<div style="margin: 30px">
+    <h1>Edit @_addinItem.AddinsType Details</h1>
+
+
+    @if (!_isSuccess && _message != "")
+    {
+        Snackbar.Add(_message, Severity.Error);
+    }
+
+    @if (_addinItem != null)
+    {
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <div class="col-6 d-flex flex-column gap-y-3">
+                    <MudTextField @bind-Value="_addinItem.AddinsType" Label="Addins Name" Variant="Variant.Outlined"></MudTextField>
+                    <MudTextField @bind-Value="_addinItem.Price" Label="Price" Variant="Variant.Outlined"></MudTextField>
+                    <MudTextField @bind-Value="_password" Label="Enter password to make changes" Variant="Variant.Outlined" InputType="@InputType.Password"></MudTextField>
+                    <div>
+                        <MudButton Variant="Variant.Filled" DisableElevation="true" Color="Color.Error" Class="mt-5" OnClick="@(()  => NavigationManager.NavigateTo("/addinsedit"))">
+                            Cancel
+                        </MudButton>
+                        <MudButton Variant="Variant.Filled" DisableElevation="true" Color="Color.Primary" Class="mt-5" OnClick="updateAddInsItem">
+                            Update
+                        </MudButton>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string addinsID { get; set; }
+
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+
+    private string _message { get; set; } = "";
+    private bool _isSuccess { get; set; } = false;
+
+    private Data.Addins _addinItem { get; set; } //This variable contains the details of the addins
+
+    private string _password { get; set; }
+
+    protected override void OnInitialized()
+    {
+        _addinItem = AddinsServices.GetAddinsDetailsByID(addinsID);
+    }
+    protected void updateAddInsItem()
+    {
+        try
+        {
+            if (String.IsNullOrEmpty(_password))
+            {
+                _message = "Please Enter Password";
+                return;
+            }
+            if (String.IsNullOrEmpty(_addinItem.AddinsType))
+            {
+                _message = "Please Enter Name";
+                return;
+            }
+            if (_addinItem.Price <= 0)
+            {
+                _message = "Please Enter Valid Price";
+                return;
+            }
+            if (_password != _globalState.CurrentUser.Password)
+            {
+                _message = "Please Provide Correct password";
+                return;
+            }
+            AddinsServices.UpdateAddinsDetails(_addinItem);
+            _message = "Successfully Updated!";
+            _isSuccess = true;
+            NavigationManager.NavigateTo("/addinsedit");
+            Snackbar.Add(_message, Severity.Success);
+        }
+        catch (Exception e)
+        {
+            _message = e.Message;
+        }
+    }
+}

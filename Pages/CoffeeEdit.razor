@@ -1,0 +1,91 @@
+﻿@page "/coffeeedit/{CoffeeId}"
+
+@inject NavigationManager NavigationManager
+@inject CoffeeServices CoffeeServices
+@inject ISnackbar Snackbar
+
+<div style="margin: 30px">
+    <h1>Edit @_coffeeItem.CoffeeType Details</h1>
+
+
+    @if (!_isSuccess && _message != "")
+    {
+        Snackbar.Add(_message, Severity.Error);
+    }
+
+    @if (_coffeeItem != null)
+    {
+        <div class="container-fluid mt-5">
+            <div class="row">
+                <div class="col-6 d-flex flex-column gap-y-3">
+                    <MudTextField @bind-Value="_coffeeItem.CoffeeType" Label="Coffee Name" Variant="Variant.Outlined"></MudTextField>
+                    <MudTextField @bind-Value="_coffeeItem.Price" Label="Price" Variant="Variant.Outlined"></MudTextField>
+                    <MudTextField @bind-Value="_password" Label="Enter password to make changes" Variant="Variant.Outlined" InputType="@InputType.Password"></MudTextField>
+                    <div>
+                        <MudButton Variant="Variant.Filled" DisableElevation="true" Color="Color.Error" Class="mt-5" OnClick="@(()  => NavigationManager.NavigateTo("/coffeeedit"))">
+                            Cancel
+                        </MudButton>
+                        <MudButton Variant="Variant.Filled" DisableElevation="true" Color="Color.Primary" Class="mt-5" OnClick="updateCoffeeItem">
+                            Update
+                        </MudButton>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string coffeeID { get; set; }
+
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+
+    private string _message { get; set; } = "";
+    private bool _isSuccess { get; set; } = false;
+
+    private Data.Coffee _coffeeItem { get; set; } //This variable contains the details of the coffee
+
+    private string _password { get; set; }
+
+    protected override void OnInitialized()
+    {
+        _coffeeItem = CoffeeServices.GetCoffeeDetailsByID(coffeeID);
+    }
+    protected void updateCoffeeItem()
+    {
+        try
+        {
+            if (String.IsNullOrEmpty(_password))
+            {
+                _message = "Please Enter Password";
+                return;
+            }
+            if (String.IsNullOrEmpty(_coffeeItem.CoffeeType))
+            {
+                _message = "Please Enter Name";
+                return;
+            }
+            if (_coffeeItem.Price <= 0)
+            {
+                _message = "Please Enter Valid Price";
+                return;
+            }
+            if (_password != _globalState.CurrentUser.Password)
+            {
+                _message = "Please Provide Correct password";
+                return;
+            }
+            CoffeeServices.UpdateCoffeeDetails(_coffeeItem);
+            _message = "Successfully Updated!";
+            _isSuccess = true;
+            NavigationManager.NavigateTo("/coffeeedit");
+            Snackbar.Add(_message, Severity.Success);
+        }
+        catch (Exception e)
+        {
+            _message = e.Message;
+        }
+    }
+}

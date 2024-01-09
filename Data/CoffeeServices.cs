@@ -13,7 +13,7 @@ namespace Bislerium.Data
             new() { CoffeeType = "Mocha", Price = 230},
             new() { CoffeeType = "Cold Brew", Price = 205},
             new() { CoffeeType = "Iced Coffee", Price = 245},
-            new() { CoffeeType = "Café au Lait", Price = 360},
+            new() { CoffeeType = "Vietnamese Coffee", Price = 360},
             new() { CoffeeType = "Café Cubano", Price = 275 },
             new() { CoffeeType = "Vienna Coffee", Price = 270 }
         };
@@ -21,7 +21,7 @@ namespace Bislerium.Data
         public void SaveCoffeeInJsonFile(List<Coffee> coffeeList)
         {
             string appDataDirPath = AppUtils.GetAppDirectoryPath();
-            string coffeeListFilePath = AppUtils.GetCoffeeFilePath();
+            string coffeeFilePath = AppUtils.GetCoffeeFilePath();
 
             if (!Directory.Exists(appDataDirPath))
             {
@@ -30,19 +30,19 @@ namespace Bislerium.Data
 
             var json = JsonSerializer.Serialize(coffeeList);
 
-            File.WriteAllText(coffeeListFilePath, json);
+            File.WriteAllText(coffeeFilePath, json);
         }
 
         public List<Coffee> GetCoffeeFromJsonFile()
         {
-            string coffeeListFilePath = AppUtils.GetCoffeeFilePath();
+            string coffeeFilePath = AppUtils.GetCoffeeFilePath();
 
-            if (!File.Exists(coffeeListFilePath))
+            if (!File.Exists(coffeeFilePath))
             {
                 return new List<Coffee>();
             }
 
-            var json = File.ReadAllText(coffeeListFilePath);
+            var json = File.ReadAllText(coffeeFilePath);
 
             return JsonSerializer.Deserialize<List<Coffee>>(json);
         }

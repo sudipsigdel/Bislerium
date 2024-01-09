@@ -1,7 +1,50 @@
 ﻿@page "/addins"
 
-<h3>Addins</h3>
+@using System.Diagnostics;
+@inject AddinsServices AddinsServices
+@inject OrderItemsServices OrderItemsServices
+@inject NavigationManager NavigationManager
+@using Bislerium.Data
+@inject ISnackbar Snackbar;
+
+<table id="customers">
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Add to Cart</th>
+  </tr>
+
+  @foreach(Data.Addins item in Elements) {
+    <tr>
+        <td>@item.AddinsType</td>
+        <td>@item.Price</td>
+        <td>
+                <MudFab Color="Color.Primary"
+                        StartIcon="@Icons.Material.Filled.ShoppingCart"
+                        Size="Size.Medium"
+                        OnClick="@(() => { AddItemInCart(item.Id, item.Price, item.AddinsType); Snackbar.Add("Added to Cart", Severity.Success); })"
+                        aria-label="Add" />
+
+        </td>
+    </tr>
+  }
+</table>
 
 @code {
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
 
+    private IEnumerable<Data.Addins> Elements { get; set; } = new List<Data.Addins>();
+
+    protected override void OnInitialized()
+    {
+        Elements = AddinsServices.GetAddinsFromJsonFile();
+        _globalState.AppBarTitle = "Items";
+    }
+
+    private void AddItemInCart(Guid addInItemID, double itemPrice, string name)
+    {
+        //calls the addItem in orderItemList
+        OrderItemsServices.AddItemInOrderList(_globalState.OrderItems, addInItemID, "Add-Ins", itemPrice, name);
+    }
 }
