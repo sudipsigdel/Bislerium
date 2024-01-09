@@ -37,21 +37,6 @@
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Bislerium.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\addins.json">
-      <PackagePath>Bislerium Cafe Data\addins.json</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\coffee.json">
-      <PackagePath>Bislerium Cafe Data\coffee.json</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\customer.json">
-      <PackagePath>Bislerium Cafe Data\customer.json</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\orderItem.json">
-      <PackagePath>Bislerium Cafe Data\orderItem.json</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\orders.json">
-      <PackagePath>Bislerium Cafe Data\orders.json</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.deps.json">
       <PackagePath>Bislerium.deps.json</PackagePath>
     </AppxPackagedFile>
