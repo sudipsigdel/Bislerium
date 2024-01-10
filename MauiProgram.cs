@@ -22,8 +22,6 @@ namespace Bislerium
             builder.Services.AddMudServices(config =>
             {
                 config.SnackbarConfiguration.VisibleStateDuration = 2000;
-                config.SnackbarConfiguration.HideTransitionDuration = 200;
-                config.SnackbarConfiguration.ShowTransitionDuration = 200;
                 config.SnackbarConfiguration.MaxDisplayedSnackbars = 6;
                 config.SnackbarConfiguration.PositionClass = Defaults.Classes.Position.BottomStart;
             });
@@ -34,6 +32,8 @@ namespace Bislerium
             builder.Services.AddSingleton<OrderServices>();
             builder.Services.AddSingleton<OrderItemsServices>();
             builder.Services.AddSingleton<UserServices>();
+            builder.Services.AddSingleton<ReportService>();
+            builder.Services.AddSingleton<InvoiceDocumentService>();
 
 
 #if DEBUG

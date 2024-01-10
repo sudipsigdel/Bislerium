@@ -1,9 +1,14 @@
 ﻿@page "/history"
 
 @using Bislerium.Data
+@using QuestPDF.Fluent
 @inject NavigationManager NavManager
 @inject OrderItemsServices OrderItemsServices
 @inject OrderServices OrderServices
+@inject ReportService ReportService
+@inject CoffeeServices CoffeeServices
+@inject AddinsServices AddinsServices
+@inject CustomerServices CustomerServices
 @inject ISnackbar Snackbar
 
 
@@ -23,7 +28,6 @@
         <MudText Typo="Typo.h6">Order History</MudText>
     </ToolBarContent>
 
-
     <HeaderContent>
         <MudTh>Item Name</MudTh>
         <MudTh>Type</MudTh>
@@ -36,11 +40,11 @@
 
     <RowTemplate>
         <MudTd DataLabel="Item Type">@context.Name</MudTd>
-            <MudTd DataLabel="Item Name">@context.ItemType</MudTd>
+        <MudTd DataLabel="Item Name">@context.ItemType</MudTd>
 
-            <MudTd DataLabel="Price">@context.Quantity </MudTd>
-            <MudTd DataLabel="Price">Rs.@context.TotalPrice </MudTd>
-            @foreach (Order order in Data)
+        <MudTd DataLabel="Price">@context.Quantity </MudTd>
+        <MudTd DataLabel="Price">Rs.@context.TotalPrice </MudTd>
+        @foreach (Order order in Data)
         {
             @foreach (OrderItem orderItemDetails in order.OrderItems)
             {
@@ -60,18 +64,61 @@
     </PagerContent>
 </MudTable>
 
+<div class="fab-container" style="margin: 30px">
+    <MudFab style="margin-right: 30px" class="mud-fab" StartIcon="@Icons.Material.Filled.Download" Label="Daily Report" OnClick="dailyReport" />
+
+    <MudFab class="mud-fab" StartIcon="@Icons.Material.Filled.Download" Label="Monthly Report" OnClick="monthlyReport" />
+</div>
 
 @code {
     [CascadingParameter]
     private string phone { set; get; }
     private string _message { set; get; } = "";
-
+    private double _totalAmount { set; get; } = 0;
+    private string timeFrame { get; set; } = "";
+    
     private IEnumerable<OrderItem> Elements = new List<OrderItem>();
-    private List<Order> Data = new();
+    private List<Order> Data = new(); 
+    private List<OrderItem> orderItemData = new();
 
     protected override void OnInitialized()
     {
         Elements = OrderItemsServices.GetOrderListFromJsonFile();
         Data = OrderServices.GetOrdersFromJsonFile();
+        orderItemData = OrderItemsServices.GetOrderListFromJsonFile();
+    }
+
+    public void downloadPdf()
+    {
+        //Data have order
+        //orderItemData have orderItem
+
+        Dictionary<string, List<ProductSalesQuantity>> orderItems = ReportService.getOrderItems(orderItemData, timeFrame);
+        List<Order> ListData = ReportService.getOrderList(Data, timeFrame);
+
+        QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community;
+        InvoiceDocumentService document = new InvoiceDocumentService(orderItems["add-ins"], orderItems["coffees"], ListData, timeFrame);
+        if (timeFrame.Equals("Monthly"))
+        {
+            string filePath = Path.Combine(AppUtils.GetAppDirectoryPath(), "MonthSalesReport.PDF");
+            document.GeneratePdf(filePath);
+            Snackbar.Add("Monthly Sales Report Downloaded!", Severity.Success);
+        }
+        else
+        {
+            string filePath = Path.Combine(AppUtils.GetAppDirectoryPath(), "DaySalesReport.PDF");
+            document.GeneratePdf(filePath);
+            Snackbar.Add("Daily Sales Report Downloaded!", Severity.Success);
+        }
+    }
+    public void monthlyReport()
+    {
+        timeFrame = "Monthly";
+        downloadPdf();
+    }
+    public void dailyReport()
+    {
+        timeFrame = "Daily";
+        downloadPdf();
     }
 }

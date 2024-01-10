@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HXug9wocYdDqa4IUMVQB8aRZw2OoFxi9a4OX4oHfvCY=",
+  "Hash": "Oc9K5WbHzjnNgv9m39cRch18loVXjW8MDxUKRX+Zl/Y=",
   "Source": "Bislerium",
   "BasePath": "/",
   "Mode": "Root",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\bislerium.png"
+    },
+    {
+      "Identity": "C:\\Users\\Acer\\OneDrive\\Desktop\\Bislerium\\wwwroot\\images\\logo.svg",
+      "SourceId": "Bislerium",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Acer\\OneDrive\\Desktop\\Bislerium\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/logo.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.svg"
     },
     {
       "Identity": "C:\\Users\\Acer\\OneDrive\\Desktop\\Bislerium\\wwwroot\\index.html",

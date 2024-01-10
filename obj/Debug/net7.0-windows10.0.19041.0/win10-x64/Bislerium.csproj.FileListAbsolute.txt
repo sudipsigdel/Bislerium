@@ -713,3 +713,14 @@ C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\wi
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\Pages\AddinsEditAdmin.razor.rz.scp.css
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\scopedcss\Pages\CoffeeEditAdmin.razor.rz.scp.css
 C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bislerium.scale-100.png
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium Cafe Data\addins.json
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium Cafe Data\coffee.json
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium Cafe Data\customer.json
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium Cafe Data\orderItem.json
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium Cafe Data\orders.json
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\HarfBuzzSharp.dll
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\QuestPDF.dll
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SkiaSharp.dll
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SkiaSharp.HarfBuzz.dll
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\libHarfBuzzSharp.dll
+C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\libSkiaSharp.dll

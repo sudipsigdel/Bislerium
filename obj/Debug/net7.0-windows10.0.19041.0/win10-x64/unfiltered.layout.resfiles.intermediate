@@ -1,5 +1,10 @@
 wwwroot\_content\MudBlazor\MudBlazor.min.css
 wwwroot\_content\MudBlazor\MudBlazor.min.js
+Bislerium Cafe Data\addins.json
+Bislerium Cafe Data\coffee.json
+Bislerium Cafe Data\customer.json
+Bislerium Cafe Data\orderItem.json
+Bislerium Cafe Data\orders.json
 OpenSans-Regular.ttf
 appicon.ico
 appiconLargeTile.scale-100.png
@@ -68,4 +73,5 @@ AboutAssets.txt
 Shared\MainLayout.razor.css
 wwwroot\favicon.ico
 wwwroot\images\bislerium.png
+wwwroot\images\logo.svg
 wwwroot\index.html

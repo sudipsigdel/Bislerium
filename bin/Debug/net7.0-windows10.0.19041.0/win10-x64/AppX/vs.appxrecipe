@@ -30,29 +30,49 @@
     <AppXManifest Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-01-09T19:11:06.439</Modified>
+      <Modified>2024-01-10T15:55:50.931</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-01-09T19:10:55.817</Modified>
+      <Modified>2024-01-10T15:28:10.691</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.runtimeconfig.json">
       <PackagePath>Bislerium.runtimeconfig.json</PackagePath>
-      <Modified>2024-01-09T10:57:38.677</Modified>
+      <Modified>2024-01-10T15:13:08.854</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.dll">
       <PackagePath>Bislerium.dll</PackagePath>
-      <Modified>2024-01-09T19:10:54.859</Modified>
+      <Modified>2024-01-10T15:55:50.092</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Bislerium.exe</PackagePath>
-      <Modified>2024-01-09T19:10:54.916</Modified>
+      <Modified>2024-01-10T15:55:50.105</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\addins.json">
+      <PackagePath>Bislerium Cafe Data\addins.json</PackagePath>
+      <Modified>2024-01-09T19:11:10.589</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\coffee.json">
+      <PackagePath>Bislerium Cafe Data\coffee.json</PackagePath>
+      <Modified>2024-01-09T19:11:10.584</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\customer.json">
+      <PackagePath>Bislerium Cafe Data\customer.json</PackagePath>
+      <Modified>2024-01-10T14:14:54.034</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\orderItem.json">
+      <PackagePath>Bislerium Cafe Data\orderItem.json</PackagePath>
+      <Modified>2024-01-10T05:39:55.783</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Bislerium Cafe Data\orders.json">
+      <PackagePath>Bislerium Cafe Data\orders.json</PackagePath>
+      <Modified>2024-01-10T05:39:55.767</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Bislerium.deps.json">
       <PackagePath>Bislerium.deps.json</PackagePath>
-      <Modified>2024-01-09T15:43:31.780</Modified>
+      <Modified>2024-01-10T15:13:08.751</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.14\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -810,6 +830,10 @@
       <PackagePath>WinRT.Runtime.dll</PackagePath>
       <Modified>2023-10-16T19:41:06.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\harfbuzzsharp\7.3.0\lib\net6.0\HarfBuzzSharp.dll">
+      <PackagePath>HarfBuzzSharp.dll</PackagePath>
+      <Modified>2023-09-20T18:11:30.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\microsoft.aspnetcore.authorization\7.0.14\lib\net7.0\Microsoft.AspNetCore.Authorization.dll">
       <PackagePath>Microsoft.AspNetCore.Authorization.dll</PackagePath>
       <Modified>2023-10-23T21:34:00.000</Modified>
@@ -990,9 +1014,25 @@
       <PackagePath>MudBlazor.dll</PackagePath>
       <Modified>2024-01-02T23:25:10.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\questpdf\2023.12.2\lib\net6.0\QuestPDF.dll">
+      <PackagePath>QuestPDF.dll</PackagePath>
+      <Modified>2024-01-01T16:27:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\skiasharp\2.88.6\lib\net6.0\SkiaSharp.dll">
+      <PackagePath>SkiaSharp.dll</PackagePath>
+      <Modified>2023-09-20T18:11:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\skiasharp.harfbuzz\2.88.6\lib\net6.0\SkiaSharp.HarfBuzz.dll">
+      <PackagePath>SkiaSharp.HarfBuzz.dll</PackagePath>
+      <Modified>2023-09-20T18:13:26.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\system.io.pipelines\7.0.0\lib\net7.0\System.IO.Pipelines.dll">
       <PackagePath>System.IO.Pipelines.dll</PackagePath>
       <Modified>2022-10-18T16:15:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\harfbuzzsharp.nativeassets.win32\7.3.0\runtimes\win-x64\native\libHarfBuzzSharp.dll">
+      <PackagePath>libHarfBuzzSharp.dll</PackagePath>
+      <Modified>2023-09-20T18:11:34.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\microsoft.graphics.win2d\1.0.5.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
@@ -1001,6 +1041,10 @@
     <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2022-11-08T19:31:24.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\skiasharp.nativeassets.win32\2.88.6\runtimes\win-x64\native\libSkiaSharp.dll">
+      <PackagePath>libSkiaSharp.dll</PackagePath>
+      <Modified>2023-09-20T18:11:38.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\.nuget\packages\microsoft.maui.controls.ref.win\7.0.101\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -1042,6 +1086,10 @@
       <PackagePath>wwwroot\images\bislerium.png</PackagePath>
       <Modified>2024-01-09T15:39:39.121</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\wwwroot\images\logo.svg">
+      <PackagePath>wwwroot\images\logo.svg</PackagePath>
+      <Modified>2023-12-20T16:10:33.300</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\wwwroot\index.html">
       <PackagePath>wwwroot\index.html</PackagePath>
       <Modified>2024-01-06T11:23:34.575</Modified>
@@ -1072,187 +1120,187 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2024-01-09T15:43:20.754</Modified>
+      <Modified>2024-01-10T05:00:30.792</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2024-01-09T15:43:21.064</Modified>
+      <Modified>2024-01-10T05:00:31.251</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2024-01-09T15:43:21.074</Modified>
+      <Modified>2024-01-10T05:00:31.267</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2024-01-09T15:43:21.099</Modified>
+      <Modified>2024-01-10T05:00:31.299</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2024-01-09T15:43:21.124</Modified>
+      <Modified>2024-01-10T05:00:31.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2024-01-09T15:43:21.215</Modified>
+      <Modified>2024-01-10T05:00:31.456</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.834</Modified>
+      <Modified>2024-01-10T05:00:30.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.834</Modified>
+      <Modified>2024-01-10T05:00:30.900</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.854</Modified>
+      <Modified>2024-01-10T05:00:30.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.844</Modified>
+      <Modified>2024-01-10T05:00:30.904</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.847</Modified>
+      <Modified>2024-01-10T05:00:30.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.816</Modified>
+      <Modified>2024-01-10T05:00:30.856</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.816</Modified>
+      <Modified>2024-01-10T05:00:30.872</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.834</Modified>
+      <Modified>2024-01-10T05:00:30.888</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.824</Modified>
+      <Modified>2024-01-10T05:00:30.874</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.824</Modified>
+      <Modified>2024-01-10T05:00:30.880</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.756</Modified>
+      <Modified>2024-01-10T05:00:30.792</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.764</Modified>
+      <Modified>2024-01-10T05:00:30.808</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.779</Modified>
+      <Modified>2024-01-10T05:00:30.808</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.785</Modified>
+      <Modified>2024-01-10T05:00:30.821</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.785</Modified>
+      <Modified>2024-01-10T05:00:30.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.795</Modified>
+      <Modified>2024-01-10T05:00:30.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.797</Modified>
+      <Modified>2024-01-10T05:00:30.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.814</Modified>
+      <Modified>2024-01-10T05:00:30.856</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.801</Modified>
+      <Modified>2024-01-10T05:00:30.840</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.804</Modified>
+      <Modified>2024-01-10T05:00:30.846</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.914</Modified>
+      <Modified>2024-01-10T05:00:30.999</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.924</Modified>
+      <Modified>2024-01-10T05:00:31.015</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.934</Modified>
+      <Modified>2024-01-10T05:00:31.031</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.944</Modified>
+      <Modified>2024-01-10T05:00:31.046</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.964</Modified>
+      <Modified>2024-01-10T05:00:31.080</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.885</Modified>
+      <Modified>2024-01-10T05:00:30.952</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.885</Modified>
+      <Modified>2024-01-10T05:00:30.952</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.894</Modified>
+      <Modified>2024-01-10T05:00:30.967</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.898</Modified>
+      <Modified>2024-01-10T05:00:30.967</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.911</Modified>
+      <Modified>2024-01-10T05:00:30.984</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.854</Modified>
+      <Modified>2024-01-10T05:00:30.920</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.864</Modified>
+      <Modified>2024-01-10T05:00:30.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.865</Modified>
+      <Modified>2024-01-10T05:00:30.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.869</Modified>
+      <Modified>2024-01-10T05:00:30.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.880</Modified>
+      <Modified>2024-01-10T05:00:30.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.975</Modified>
+      <Modified>2024-01-10T05:00:31.094</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.984</Modified>
+      <Modified>2024-01-10T05:00:31.110</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.994</Modified>
+      <Modified>2024-01-10T05:00:31.125</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2024-01-09T15:43:21.007</Modified>
+      <Modified>2024-01-10T05:00:31.156</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2024-01-09T15:43:21.055</Modified>
+      <Modified>2024-01-10T05:00:31.236</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bislerium.scale-100.png">
       <PackagePath>bislerium.scale-100.png</PackagePath>
@@ -1260,23 +1308,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.756</Modified>
+      <Modified>2024-01-10T05:00:30.792</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.768</Modified>
+      <Modified>2024-01-10T05:00:30.808</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.785</Modified>
+      <Modified>2024-01-10T05:00:30.824</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.804</Modified>
+      <Modified>2024-01-10T05:00:30.856</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2024-01-09T15:43:20.864</Modified>
+      <Modified>2024-01-10T05:00:30.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Acer\OneDrive\Desktop\Bislerium\Pages\Coffee.razor.css">
       <PackagePath>Pages\Coffee.razor.css</PackagePath>

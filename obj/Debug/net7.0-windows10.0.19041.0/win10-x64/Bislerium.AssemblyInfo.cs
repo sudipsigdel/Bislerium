@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Bislerium")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+05150c281fe1a4cb899b921139153fdce06b40a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Bislerium")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Bislerium")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
