@@ -4,6 +4,7 @@ namespace Bislerium.Data
 {
     public class CoffeeServices
     {
+        // List of default Coffee with their types and prices
         private readonly List<Coffee> _coffeeList = new()
         {
             new() { CoffeeType = "Espresso", Price = 200},
@@ -28,8 +29,8 @@ namespace Bislerium.Data
                 Directory.CreateDirectory(appDataDirPath);
             }
 
+            // Serialize the Coffee list to JSON and write it to the file
             var json = JsonSerializer.Serialize(coffeeList);
-
             File.WriteAllText(coffeeFilePath, json);
         }
 
@@ -42,12 +43,12 @@ namespace Bislerium.Data
                 return new List<Coffee>();
             }
 
+            // Read the JSON from the file and deserialize it to a list of Coffee
             var json = File.ReadAllText(coffeeFilePath);
-
             return JsonSerializer.Deserialize<List<Coffee>>(json);
         }
 
-        //This Function create a list of JSON Coffee List in the Computer just for one timne
+        // Seed default Coffee details into the JSON file (one-time setup)
         public void SeedCoffeeDetails()
         {
             List<Coffee> coffeeList = GetCoffeeFromJsonFile();

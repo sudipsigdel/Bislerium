@@ -5,6 +5,7 @@ namespace Bislerium.Data
 {
     public class AddinsServices
     {
+        // List of default Addins with their types and prices
         private readonly List<Addins> _addinsList = new()
         {
             new() { AddinsType = "Sugar", Price = 20 },
@@ -29,8 +30,8 @@ namespace Bislerium.Data
                 Directory.CreateDirectory(appDataDirPath);
             }
 
+            // Serialize the Addins list to JSON and write it to the file
             var json = JsonSerializer.Serialize(addinsList);
-
             File.WriteAllText(addinsListFilePath, json);
         }
 
@@ -43,12 +44,12 @@ namespace Bislerium.Data
                 return new List<Addins>();
             }
 
+            // Read the JSON from the file and deserialize it to a list of Addins
             var json = File.ReadAllText(addinsListFilePath);
-
             return JsonSerializer.Deserialize<List<Addins>>(json);
         }
 
-        //This Function create a list of JSON Addins List in the Computer just for one timne
+        // Seed default Addins details into the JSON file (one-time setup)
         public void SeedAddinsDetails()
         {
             List<Addins> addinsList = GetAddinsFromJsonFile();

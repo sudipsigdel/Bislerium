@@ -7,28 +7,30 @@ using IContainer = QuestPDF.Infrastructure.IContainer;
 namespace Bislerium.Data
 {
     public class InvoiceDocumentService : IDocument
-    { 
+    {
+        // Lists to store data for PDF generation
         public List<ProductSalesQuantity> addIns = new List<ProductSalesQuantity>();
         public List<ProductSalesQuantity> coffee = new List<ProductSalesQuantity>();
         public List<Order> order = new List<Order>();
         public string timeFrame { get; set; }
         public double totalAmount { get; set; } = 0;
 
+        // Constructor to initialize data
         public InvoiceDocumentService(List<ProductSalesQuantity> addInsList, List<ProductSalesQuantity> coffeeList, List<Order> orderList, string timeFrameParam)
         {
             addIns = addInsList;
             coffee = coffeeList;
             order = orderList;
             timeFrame = timeFrameParam;
-        }  
+        }
+
+        // Implementation of IDocument interface methods
         public DocumentMetadata GetMetadata() => DocumentMetadata.Default;
         public DocumentSettings GetSettings() => DocumentSettings.Default;
 
 
         public void Compose(IDocumentContainer container)
-
         {
-
             container
             .Page(page =>
             {

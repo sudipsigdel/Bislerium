@@ -6,13 +6,14 @@ namespace Bislerium.Data
     {
         public void AddItemInOrderList(List<OrderItem> _orderItems, Guid itemID, String ItemType, Double ItemPrice, string name)
         {
+            // Check if the item already exists in the order
             OrderItem orderItem = _orderItems.FirstOrDefault(x => x.ItemID == itemID && x.ItemType == ItemType);
 
             if (orderItem != null)
             {
-                //increase the quantity value if already exist
+                
                 orderItem.Quantity++;
-                //update the price of the value if added again
+                
                 orderItem.TotalPrice = orderItem.Quantity * ItemPrice;
                 return;
             }
@@ -26,11 +27,8 @@ namespace Bislerium.Data
                 Price = ItemPrice,
                 TotalPrice = ItemPrice
             };
-            //add the item in the list
+            
             _orderItems.Add(orderItem);
-
-
-
         }
 
         public void DeleteItemInOrderItemsList(List<OrderItem> _orderItems, Guid orderItemID)
@@ -54,13 +52,13 @@ namespace Bislerium.Data
                     orderItem.Quantity++;
                     orderItem.TotalPrice = orderItem.Quantity * orderItem.Price;
                 }
-                //decrease the quantity by 1
+                
                 else if (action == "sub" && orderItem.Quantity > 1)
                 {
                     orderItem.Quantity--;
                     orderItem.TotalPrice = orderItem.Quantity * orderItem.Price;
                 }
-                //remove the item if quantity is 0
+                
                 else if (action == "sub" && orderItem.Quantity == 1)
                 {
                     _orderItems.Remove(orderItem);
