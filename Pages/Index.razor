@@ -5,6 +5,7 @@
 <img width="100%" src="images/bislerium.png" />
 
 @code {
+    // Cascading parameter to receive the GlobalState from a parent component
     [CascadingParameter]
     private GlobalState _globalState { get; set; }
 
@@ -21,6 +22,7 @@
     public void logout()
     {
         _globalState.CurrentUser = null;
+
         NavManager.NavigateTo("/login");
     }
 }

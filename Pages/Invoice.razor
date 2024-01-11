@@ -25,7 +25,6 @@
         <MudText Typo="Typo.h6">Invoice</MudText>
     </ToolBarContent>
 
-
     <HeaderContent>
         <MudTh>Item Name</MudTh>
         <MudTh>Item Type</MudTh>
@@ -36,22 +35,21 @@
 
     <RowTemplate>
         <MudTd DataLabel="Item Name">@context.Name</MudTd>
-            <MudTd DataLabel="Item Type">@context.ItemType</MudTd>
-            <MudTd DataLabel="Price">Rs.@context.Price</MudTd>
-
-            <MudTd DataLabel="Quantity">
-                <span>
-                    @context.Quantity
-                </span>
-            </MudTd>
-
-        <MudTd DataLabel="Price">Rs.@context.TotalPrice</MudTd>
-        </RowTemplate>
+        <MudTd DataLabel="Item Type">@context.ItemType</MudTd>
+        <MudTd DataLabel="Price">Rs.@context.Price</MudTd>
+        <MudTd DataLabel="Quantity">
+            <span>
+                @context.Quantity
+            </span>
+        </MudTd>
+        <MudTd DataLabel="Amount">Rs.@context.TotalPrice</MudTd>
+   </RowTemplate>
 </MudTable>
+
     <MudSpacer />
 
-<div Style="margin: 30px">
-    <MudText Typo="Typo.subtitle1">Total Price: <b>Rs.@_totalAmount</b></MudText>
+    <div Style="margin: 30px">
+        <MudText Typo="Typo.subtitle1">Total Price: <b>Rs.@_totalAmount</b></MudText>
     <MudText Typo="Typo.subtitle1">Discount: <b>Rs.@_discount</b></MudText>
     @if (_redeemPrice != 0)
     {
@@ -67,33 +65,32 @@
     </MudContainer>
 </div>
 
-
-
 @code {
-
     [Parameter]
     public string phone { get; set; }
+
     [CascadingParameter]
     private GlobalState _globalState { set; get; }
-    private Customer _customer{ set; get; }
+
+    private Customer _customer { set; get; }
 
     private string _message { set; get; } = "";
 
-
     private double _totalAmount { set; get; } = 0;
-    private double _discount { set; get; } = 0;
-    private double _finalPrice { set; get; }
-    private double _redeemPrice { set; get; } = 0;
 
+    private double _discount { set; get; } = 0;
+
+    private double _finalPrice { set; get; }
+
+    private double _redeemPrice { set; get; } = 0;
 
     private IEnumerable<OrderItem> Elements = new List<OrderItem>();
 
     private Coffee _coffee { set; get; }
-    //calculate the total amount of the cart
+
     private double calculateTotalAmount()
     {
         double totalAmount = 0;
-        //calculate the total amount from the list OrderList data.
         foreach (var item in Elements)
         {
             totalAmount += item.TotalPrice;
@@ -101,38 +98,35 @@
         return totalAmount;
     }
 
-
     protected override void OnInitialized()
     {
-
         Elements = _globalState.OrderItems;
         _globalState.AppBarTitle = "Cart";
         _totalAmount = calculateTotalAmount();
 
+        // Check customer's membership status and update discounts
         List<Order> orderList = OrderServices.GetOrdersFromJsonFile();
-        CustomerServices.isMemberUpdate(phone, orderList);//edit if JSON to check if the customer is member or not
+        CustomerServices.isMemberUpdate(phone, orderList);
 
         Customer customer = CustomerServices.getCustomerFromPhone(phone);
-        if (customer.member)//true or false
+        if (customer.member)
         {
             _discount = 0.1 * _totalAmount;
         }
         if (customer.OrderCount >= 10)
         {
-            List<OrderItem> list = _globalState.OrderItems;
+           List<OrderItem> list = _globalState.OrderItems;
             foreach (OrderItem orderItemList in list)
             {
                 if (orderItemList.ItemType == "Coffee")
                 {
                     _redeemPrice = orderItemList.TotalPrice / orderItemList.Quantity;
-
                     break;
                 }
             }
         }
 
         _finalPrice = _totalAmount - _discount - _redeemPrice;
-
     }
 
     private void customerCheck()
@@ -145,7 +139,7 @@
         }
         else
         {
-
+            // Update customer's order count and place the order
             CustomerServices.editCustomerOrderCount(phone);
             Order order = new()
                 {
@@ -155,7 +149,6 @@
                     EmployeeRole = _globalState.CurrentUser.Role.ToString(),
                     OrderItems = _globalState.OrderItems,
                     OrderTotalAmount = _finalPrice,
-
                 };
             OrderServices.PlaceOrder(order);
 
@@ -164,13 +157,14 @@
                 OrderItemsServices.SaveOrderList(orderitem);
             }
             _globalState.OrderItems.Clear();
+
             if (customer.OrderCount >= 10)
             {
                 CustomerServices.resetOrderCount(phone);
             }
+
             NavigationManager.NavigateTo("/");
             Snackbar.Add("Done", Severity.Info);
-
         }
     }
 
